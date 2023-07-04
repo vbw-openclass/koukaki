@@ -12,6 +12,11 @@ main {
   overflow: hidden;
 }
 
+/* Suppression des images orchid et sunflowers du thème parent */
+.site-footer::before, .site-footer::after {
+  display: none;
+}
+
 /* Section Nomination Oscar */
 .nomination-oscar {
   position: relative;
@@ -43,11 +48,20 @@ main {
   text-align: left;
   background-image: url("./assets/images/oscar-background.png");
 }
-.nomination-oscar__image {
-  mix-blend-mode: darken;
+
+/* Apparence fade-in sur les sections */
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Suppression des images orchid et sunflowers */
-.site-footer::before, .site-footer::after {
-  display: none;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: opacity 0.5s, transform 1s;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
