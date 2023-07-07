@@ -16,3 +16,16 @@ sections.forEach(function(section) {
 });
 
 
+
+// parallax vidéo avec la bibliothèque simpleParallax
+
+document.addEventListener('DOMContentLoaded', function () {
+  const video = document.querySelector('.banner__video');
+
+  new simpleParallax(video, {
+      orientation: 'right',
+      scale: 1.15,
+      delay: 0.5,
+      transition: 'ease-in-out'
+  });
+});

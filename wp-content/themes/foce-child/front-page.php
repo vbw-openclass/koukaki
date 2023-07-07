@@ -5,12 +5,17 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <video class="banner__video" poster="<?php echo get_theme_file_uri() . '/assets/images/banner.png'; ?>" autoplay muted loop>
+                <source src=<?php echo get_theme_file_uri() . '/assets/video/studio-koukaki.mp4'; ?> type="video/mp4">
+            </video>
+            <div>
+                <img class="logo" src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants">
+            </div>
         </section>
         <section id="#story" class="story">
             <h2>L'histoire</h2>
             <article id="" class="story__article">
-                <p class="fadeIn__exclu"><?php echo get_theme_mod('story'); ?></p>
+                <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <?php
             $args = array(

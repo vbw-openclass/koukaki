@@ -18,6 +18,9 @@
     display: none;
 }
 
+/* Section banniere et vidéo */
+@import 'sass/video-banniere.scss';
+
 /* Section Nomination Oscar */
 @import 'sass/nomination-oscar.scss';
 
@@ -26,6 +29,4 @@
 
 /* Rotation des fleurs */
 @import 'sass/rotate-flowers.scss';
-
-
 
