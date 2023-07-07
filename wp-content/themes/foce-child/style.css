@@ -64,4 +64,65 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Rotation des fleurs */
+.story h2::after {
+  height: 155px;
+  animation: rotate 15s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.story__article::after, .nomination-oscar::after, .site-footer ul::after {
+  animation: rotate 15s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nomination-oscar::before {
+  animation: rotate 15s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#studio h2::before {
+  animation: rotate 15s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#studio h2::after {
+  height: 108px;
+  animation: rotate 15s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
