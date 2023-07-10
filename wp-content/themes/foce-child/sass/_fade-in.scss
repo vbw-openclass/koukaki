@@ -1,16 +1,22 @@
 .fadeIn {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(-20%);
-        transition: opacity 0.5s, transform 1s;
+        transform: translateY(20%);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     100% {
         opacity: 1;
         transform: translateY(0);
+        animation-timing-function: ease-out;
+        animation-duration: 4s; /* Durée plus longue pour ralentir */
     }
 }

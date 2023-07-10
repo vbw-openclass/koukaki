@@ -52,16 +52,14 @@ main {
 /* Section Nomination Oscar */
 .nomination-oscar {
   position: relative;
-  display: flex;
-  margin-top: 100px;
-  margin-left: 160px;
-  align-items: center;
+  margin-top: 120px;
+  margin-left: 175px;
 }
 .nomination-oscar::before {
   content: url("./assets/images/Sunflower.png");
   position: absolute;
-  left: -80px;
-  top: -150px;
+  left: -105px;
+  top: -135px;
 }
 .nomination-oscar::after {
   content: url("./assets/images/orchid.png");
@@ -70,31 +68,45 @@ main {
   top: -130px;
   z-index: -1;
 }
+.nomination-oscar__container {
+  display: flex;
+}
 .nomination-oscar__titre {
   font-size: 40px;
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 1.8em 2em;
+  padding: 1.8em 1.6em;
   line-height: 45px;
   text-align: left;
   background-image: url("./assets/images/oscar-background.png");
 }
+.nomination-oscar img {
+  margin-top: 50px;
+  width: 278px;
+  height: 130px;
+  margin-right: 220px;
+}
 
 /* Apparence fade-in sur les sections */
 .fadeIn {
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20%);
-    transition: opacity 0.5s, transform 1s;
+    transform: translateY(20%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    animation-timing-function: ease-out;
+    animation-duration: 4s; /* Durée plus longue pour ralentir */
   }
 }
 /* Rotation des fleurs */
@@ -157,4 +169,18 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Animation des titres */
+.animation-title {
+  display: inline-block;
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+}
+
+.animation-title.visibility {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
