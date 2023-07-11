@@ -2,16 +2,12 @@
     display: inline-block;
     margin-right: 10px;
     opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-    -webkit-transition: opacity 0.2s ease-in, -webkit-transform 0.5s ease-in;
-    transition: opacity 0.2s ease-in, -webkit-transform 0.5s ease-in;
-    transition: opacity 0.2s ease-in, transform 0.5s ease-in;
-    transition: opacity 0.2s ease-in, transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-  }
+    transform: translateY(100%);
 
-  .animation-title.visibility {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+    transition: opacity 0.2s ease-in, transform 0.5s ease-in;
+
+    &.visibility {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -7,8 +7,6 @@ let observer = new IntersectionObserver(function(entries, observer) {
       // Ajoute la classe 'fadeIn' à l'élément cible
       entry.target.classList.add('fadeIn');
 
-      // Vérifie si l'élément cible n'est pas une balise <p>
-      if (!entry.target.matches('p')) {
         // Recherche le premier titre (balise h2 ou h3) dans l'élément cible
         const title = entry.target.querySelector('h2, h3');
 
@@ -40,8 +38,6 @@ let observer = new IntersectionObserver(function(entries, observer) {
             }, delay);
           });
         }
-      }
-
       // Cesse d'observer l'élément cible une fois qu'il est apparu dans la zone d'intersection
       observer.unobserve(entry.target);
     }
@@ -52,12 +48,14 @@ let observer = new IntersectionObserver(function(entries, observer) {
 });
 
 // Sélectionne tous les éléments correspondant aux sélecteurs CSS donnés
-let sections = document.querySelectorAll('.banner, #characters, .story, #place, #studio, .nomination-oscar , .site-footer');
+let sections = document.querySelectorAll('#characters, .story, #place, #studio, .nomination-oscar , .site-footer');
 
 // Pour chaque section sélectionnée, observe les changements d'intersection
 sections.forEach(function(section) {
   observer.observe(section);
 });
+
+
 
 
 // parallax vidéo avec la bibliothèque simpleParallax
@@ -74,3 +72,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+// Ajoute un écouteur d'événement qui détecte le défilement de la fenêtre.
+
+window.addEventListener('scroll', function () {
+
+  // Selection des éléments
+  const bigCloud = document.querySelector('.big-cloud');
+  const littleCloud = document.querySelector('.little-cloud');
+  const placeSection = document.querySelector('#place');
+
+  // Récuperation de la position verticale (offsetTop) de la section "place" par rapport au haut de la page
+  // ainsi que la position de défilement verticale actuelle de la fenêtre.
+  const sectionOffsetTop = placeSection.offsetTop;
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  // Verification si la position de défilement actuelle est supérieure ou égale à la position verticale
+  if (scrollPosition >= sectionOffsetTop) {
+
+      // calcule la valeur de défilement, détermine l'intensité du déplacement des nuages
+      const parallaxValue = (scrollPosition - sectionOffsetTop) / 2;
+
+      // Math.min() limite la valeur de déplacement à 300px
+      const translationX = Math.min(parallaxValue, 300);
+
+      // Utilisation de la propriété CSS transform pour modifier la position des nuages avec translateX
+      // Le -translationX (distance de déplacement vers la gauche), 'px' pour utiliser le pixel.
+      bigCloud.style.transform = 'translateX(' + (-translationX) + 'px)';
+      littleCloud.style.transform = 'translateX(' + (-translationX) + 'px)';
+  }
+});

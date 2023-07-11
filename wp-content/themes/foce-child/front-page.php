@@ -4,13 +4,11 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner">
+        <section class="banner fadeInverse">
             <video class="banner__video" poster="<?php echo get_theme_file_uri() . '/assets/images/banner.png'; ?>" autoplay muted loop>
                 <source src=<?php echo get_theme_file_uri() . '/assets/video/studio-koukaki.mp4'; ?> type="video/mp4">
             </video>
-            <div>
-                <img class="logo" src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants">
-            </div>
+            <img class="logo" src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story">
             <h2>L'histoire</h2>
@@ -30,33 +28,15 @@ get_header();
             <article id="characters">
                 <div class="main-character">
                     <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
-                </div>
-                <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
+                    <?php get_template_part('template-parts/characters-swiper'); ?>
                 </div>
             </article>
             <article id="place">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
+                    <img class="big-cloud" src="<?php echo get_theme_file_uri() . '/assets/images/big-cloud.png'; ?>" alt="grandNuage">
+                    <img class="little-cloud" src="<?php echo get_theme_file_uri() . '/assets/images/little-cloud.png'; ?>" alt="petitNuage">
                 </div>
             </article>
         </section>

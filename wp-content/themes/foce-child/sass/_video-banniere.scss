@@ -10,27 +10,42 @@
     }
 }
 
-//animation flottement de titre
+//animation flottement et fade-in du titre
 
 .logo {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 220px;
+    left: 350px;
     z-index: 2;
-    animation: floatLogo 3s ease-in-out infinite alternate;
+    animation: floatLogo 2s ease-in-out infinite, fadeInLogo 3s ease-in-out;
+}
+
+
+@keyframes fadeInLogo {
+    0% {
+        transform : translateY(300px);
+		opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+		opacity: 1;
+    }
 }
 
 @keyframes floatLogo {
     0% {
-        transform: translate(-50%, -50%);
-    }
-
-    50% {
-        transform: translate(-50%, -60%);
-    }
-
-    100% {
-        transform: translate(-50%, -50%);
-    }
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(-15px, 11px);
+      }
+      50%{
+          transform: translate(0, 15px);
+      }
+      75%{
+          transform: translate(15px, 10px);
+      }
+      100% {
+        transform: translate(0);
+      }
 }

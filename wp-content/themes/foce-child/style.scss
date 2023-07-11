@@ -18,17 +18,21 @@
     display: none;
 }
 
-/* Section banniere et vidéo */
-@import 'sass/video-banniere.scss';
-
-/* Section Nomination Oscar */
-@import 'sass/nomination-oscar.scss';
-
 /* Apparence fade-in sur les sections */
 @import 'sass/fade-in.scss';
+
+/* Section banniere et vidéo */
+@import 'sass/video-banniere.scss';
 
 /* Rotation des fleurs */
 @import 'sass/rotate-flowers.scss';
 
 /* Animation des titres */
 @import 'sass/animation-title.scss';
+
+/* Animation des nuages */
+@import 'sass/animation-cloud.scss';
+
+/* Section Nomination Oscar */
+@import 'sass/nomination-oscar.scss';
+
