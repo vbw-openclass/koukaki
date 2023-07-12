@@ -73,6 +73,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+//SwiperJS Coverflow
+
+const swiper = new Swiper(".swiper", {
+  direction: 'horizontal',
+  centeredSlides: true,
+  slidesPerView: "auto",
+  speed: 1000,
+  autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+  },
+  loop: true,
+  loopedSlides: 2,
+  loopAdditionalSlides: 1,
+  effect: "coverflow",
+  coverflowEffect: {
+      slideShadows: false,
+      rotate: 70,
+      stretch: 0,
+      depth: 50,
+      modifier: 1, 
+  },
+});
+
+
+
 // Ajoute un écouteur d'événement qui détecte le défilement de la fenêtre.
 
 window.addEventListener('scroll', function () {
@@ -91,7 +117,7 @@ window.addEventListener('scroll', function () {
   if (scrollPosition >= sectionOffsetTop) {
 
       // calcule la valeur de défilement, détermine l'intensité du déplacement des nuages
-      const parallaxValue = (scrollPosition - sectionOffsetTop) / 2;
+      const parallaxValue = (scrollPosition - sectionOffsetTop) / 4;
 
       // Math.min() limite la valeur de déplacement à 300px
       const translationX = Math.min(parallaxValue, 300);
