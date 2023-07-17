@@ -177,6 +177,10 @@ main {
 }
 
 /* Swiper des personnages */
+.main-character h3 {
+  max-width: 1440px;
+}
+
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -187,8 +191,8 @@ main {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 400px !important;
-  height: 400px;
+  width: 350px !important;
+  height: 350px;
   margin-right: 40px;
   margin-left: 40px;
 }

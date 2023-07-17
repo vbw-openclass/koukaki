@@ -48,7 +48,7 @@ let observer = new IntersectionObserver(function(entries, observer) {
 });
 
 // Sélectionne tous les éléments correspondant aux sélecteurs CSS donnés
-let sections = document.querySelectorAll('#characters, .story, #place, #studio, .nomination-oscar , .site-footer');
+let sections = document.querySelectorAll('#characters, .story, #place, #studio, .site-footer');
 
 // Pour chaque section sélectionnée, observe les changements d'intersection
 sections.forEach(function(section) {
@@ -59,7 +59,7 @@ sections.forEach(function(section) {
 
 
 // parallax vidéo avec la bibliothèque simpleParallax
-
+// L'événement DOMContentLoaded est utilisé pour s'assurer que le code est exécuté après que le DOM a été chargé
 document.addEventListener('DOMContentLoaded', function () {
   const video = document.querySelector('.banner__video');
 
@@ -99,31 +99,26 @@ const swiper = new Swiper(".swiper", {
 
 
 
-// Ajoute un écouteur d'événement qui détecte le défilement de la fenêtre.
-
+// Ajout d'un écouteur d'événement qui détecte le scroll de la fenêtre.
 window.addEventListener('scroll', function () {
 
-  // Selection des éléments
+  // Selection des éléments HTML avec les classes
   const bigCloud = document.querySelector('.big-cloud');
   const littleCloud = document.querySelector('.little-cloud');
   const placeSection = document.querySelector('#place');
 
-  // Récuperation de la position verticale (offsetTop) de la section "place" par rapport au haut de la page
-  // ainsi que la position de défilement verticale actuelle de la fenêtre.
+ // Récupère la position verticale de l'élément avec l'id 'place' par rapport au haut de la page.
   const sectionOffsetTop = placeSection.offsetTop;
+  // Obtenez la position actuelle de défilement de la fenêtre.
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  // Verification si la position de défilement actuelle est supérieure ou égale à la position verticale
+  // Vérifie si la position verticale de défilement a atteint ou est supérieur à la position de l'élément avec l'id 'place'
   if (scrollPosition >= sectionOffsetTop) {
 
-      // calcule la valeur de défilement, détermine l'intensité du déplacement des nuages
+  // Calculez la valeur de parallaxe, qui est la différence entre la position de défilement et le haut relatif, divisée par 4.
       const parallaxValue = (scrollPosition - sectionOffsetTop) / 4;
-
-      // Math.min() limite la valeur de déplacement à 300px
       const translationX = Math.min(parallaxValue, 300);
 
-      // Utilisation de la propriété CSS transform pour modifier la position des nuages avec translateX
-      // Le -translationX (distance de déplacement vers la gauche), 'px' pour utiliser le pixel.
       bigCloud.style.transform = 'translateX(' + (-translationX) + 'px)';
       littleCloud.style.transform = 'translateX(' + (-translationX) + 'px)';
   }
