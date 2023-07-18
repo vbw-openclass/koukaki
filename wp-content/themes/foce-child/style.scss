@@ -8,15 +8,8 @@
  Version: 0.1
  */
 
- main {
-    overflow: hidden;
- }
-
-/* Suppression des images orchid et sunflowers du thème parent */
-
-.site-footer::before, .site-footer::after {
-    display: none;
-}
+/* Propriété du layout général du site */
+@import 'sass/layout.scss';
 
 /* Apparence fade-in sur les sections */
 @import 'sass/fade-in.scss';
@@ -40,4 +33,7 @@
 @import 'sass/nomination-oscar.scss';
 
 /* Menu burger */
-@import 'sass/menu-burger';
+@import 'sass/menu-burger.scss';
+
+/* Responsive */
+@import 'sass/responsive.scss';

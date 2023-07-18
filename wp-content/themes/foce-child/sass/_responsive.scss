@@ -1,0 +1,29 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #studio h2 {
+
+        &::before {
+            left: -1.7em;
+        }
+    }
+
+    .nomination-oscar {
+        margin-left: 0;
+
+        &::before {
+            top: -175px;
+            left: -100px;
+        }
+
+        &__titre {
+            font-size: 20px;
+            padding: 1.8em 3em;
+            line-height: 35px;
+        }
+
+        img {
+            margin-top: 20px;
+            margin-right: 0;
+        }
+    }
+}
+

@@ -8,7 +8,8 @@
  Description: Thème enfant à l'occasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-main {
+/* Propriété du layout général du site */
+main, .burger-open {
   overflow: hidden;
 }
 
@@ -467,4 +468,27 @@ a {
 
 .float {
   animation: floatLogo 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #studio h2::before {
+    left: -1.7em;
+  }
+  .nomination-oscar {
+    margin-left: 0;
+  }
+  .nomination-oscar::before {
+    top: -175px;
+    left: -100px;
+  }
+  .nomination-oscar__titre {
+    font-size: 20px;
+    padding: 1.8em 3em;
+    line-height: 35px;
+  }
+  .nomination-oscar img {
+    margin-top: 20px;
+    margin-right: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
