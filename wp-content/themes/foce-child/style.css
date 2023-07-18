@@ -374,76 +374,55 @@ main, .burger-open {
   font-size: 12px;
   margin-top: 70px;
 }
-
-@keyframes burger-open {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-a {
-  text-decoration: none;
-}
-
-.logo-burger {
+.burger-open__logo {
   left: 640px;
   top: 100px;
   width: 154px;
   height: 95px;
 }
-
-.sun-flower-burger {
+.burger-open__sun-flower {
   top: 115px;
   left: 1020px;
   width: 216px;
   height: 216px;
 }
-
-.orchid-flower-burger {
+.burger-open__orchid-flower {
   top: 140px;
   left: -50px;
   width: 150px;
   height: 148px;
 }
-
-.petal-flower-burger {
+.burger-open__petal-flower {
   top: 505px;
   left: 205px;
   width: 70px;
   height: 70px;
 }
-
-.pink-flower-burger {
+.burger-open__pink-flower {
   top: 420px;
   left: 1390px;
   width: 80px;
   height: 75px;
 }
-
-.hibiscus-flower-burger {
+.burger-open__hibiscus-flower {
   top: 690px;
   left: 1135px;
   width: 626px;
   height: 626px;
 }
-
-.blue-cat-burger {
+.burger-open__blue-cat {
   top: 200px;
   left: 260px;
   width: 109px;
   height: 98px;
 }
-
-.orange-cat-burger {
+.burger-open__orange-cat {
   top: 745px;
   left: 90px;
   width: 105px;
   height: 95px;
 }
-
-.black-cat-burger {
+.burger-open__black-cat {
   top: 500px;
   left: 1075px;
   width: 135px;
@@ -470,11 +449,111 @@ a {
   animation: floatLogo 2s ease-in-out infinite;
 }
 
+@keyframes burger-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+a {
+  text-decoration: none;
+}
+
 /* Responsive */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Section bannière */
+  .banner__video {
+    display: none;
+  }
+  .banner .logo {
+    top: 325px;
+    left: 225px;
+    animation: none;
+  }
+  .main-navigation ul {
+    margin-left: 205px;
+  }
+  .navbar-burger {
+    margin-left: 125px;
+  }
+  .burger-open {
+    width: 825px;
+  }
+  .burger-open__logo {
+    left: 325px;
+  }
+  .burger-open__sun-flower {
+    top: 115px;
+    left: 530px;
+    width: 165px;
+    height: 165px;
+  }
+  .burger-open__petal-flower {
+    top: 530px;
+  }
+  .burger-open__pink-flower {
+    top: 320px;
+    left: 725px;
+  }
+  .burger-open__hibiscus-flower {
+    top: 820px;
+    left: 555px;
+    width: 420px;
+    height: 420px;
+  }
+  .burger-open__blue-cat {
+    top: 280px;
+    left: 75px;
+  }
+  .burger-open__orange-cat {
+    top: 795px;
+    left: 25px;
+  }
+  .burger-open__black-cat {
+    left: 565px;
+  }
+  /* Section  menu-burger*/
+  .main-character h3 {
+    margin-left: -130px;
+  }
+  .swiper {
+    margin-left: 1.5em !important;
+  }
+  .swiper-slide {
+    width: 200px !important;
+    height: 200px;
+  }
+  /* Section story et place */
+  .story #place {
+    min-height: 0;
+  }
+  .story #place div {
+    display: block;
+    margin-left: 2em !important;
+    margin-top: 30px;
+  }
+  .story #place h3 {
+    text-align: left;
+    background-position: left;
+    margin-left: 30px;
+    padding: 1em 1.3em;
+  }
+  .story #place .big-cloud {
+    width: 200px;
+    height: 100px;
+    top: -245px;
+    left: 600px;
+  }
+  .story #place .little-cloud {
+    top: -230px;
+    left: 210px;
+  }
   #studio h2::before {
     left: -1.7em;
   }
+  /* Section nomination-oscar */
   .nomination-oscar {
     margin-left: 0;
   }
@@ -490,5 +569,32 @@ a {
   .nomination-oscar img {
     margin-top: 20px;
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner {
+    min-height: 0;
+    height: 425px;
+  }
+  .banner__video {
+    display: none;
+  }
+  .banner .logo {
+    top: 185px;
+    left: 110px;
+    animation: none;
+  }
+  .main-navigation ul {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+  .main-navigation ul .site-title {
+    display: block;
+    font-size: 15px;
+  }
+  .navbar-burger {
+    margin-left: 55px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
