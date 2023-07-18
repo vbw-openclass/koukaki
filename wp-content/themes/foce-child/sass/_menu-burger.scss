@@ -1,0 +1,216 @@
+//Navbar 
+.main-navigation {
+  display: flex;
+  position: fixed;
+  width: 1440px;
+
+  ul {
+    display: flex;
+    font-weight: bold;
+    margin-left: 550px;
+  }
+}
+  
+
+// Menu burger en 3 barres puis 2 en croix
+.navbar-burger {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 400px;
+
+  span {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+
+  &.active {
+    span {
+      background-color: transparent !important;
+
+      &::before {
+        transform: translateY(0px) rotateZ(45deg);
+      }
+
+      &::after {
+        transform: translateY(0px) rotateZ(-45deg);
+      }
+    }
+  }
+}
+
+
+// Menu burger ouvert
+.site-navigation {
+  .site-title {
+    position: fixed;
+  }
+}
+
+.burger-open {
+  position: fixed;
+  width: 1440px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in;
+  overflow: hidden;
+  background-color: #FFF5E9;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    animation: burger-open 1s ease-in-out;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 210px;
+    margin-bottom: 130px;
+  }
+
+  li {
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 140px;
+    list-style: none;
+    margin: 0;
+  }
+
+  img {
+    margin: auto;
+    display: flex;
+  }
+
+  a:hover {
+    color: black;
+    text-shadow: -1px -1px 4px rgba(255, 92, 0, 0.3), 4px -1px 4px rgba(255, 92, 0, 0.3), -1px 4px 4px rgba(255, 92, 0, 0.3), 4px 4px 4px rgba(255, 92, 0, 0.3);
+  }
+
+  p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 70px;
+  }
+}
+
+@keyframes burger-open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+
+//Positionnement des images et animations du menu burger
+.logo-burger {
+  left: 640px;
+  top: 100px;
+  width: 154px;
+  height: 95px;
+}
+
+.sun-flower-burger {
+  top: 115px;
+  left: 1020px;
+  width: 216px;
+  height: 216px;
+}
+
+.orchid-flower-burger {
+  top: 140px;
+  left: -50px;
+  width: 150px;
+  height: 148px;
+}
+
+.petal-flower-burger {
+  top: 505px;
+  left: 205px;
+  width: 70px;
+  height: 70px;
+}
+
+.pink-flower-burger {
+  top: 420px;
+  left: 1390px;
+  width: 80px;
+  height: 75px;
+}
+
+.hibiscus-flower-burger {
+  top: 690px;
+  left: 1135px;
+  width: 626px;
+  height: 626px;
+}
+
+.blue-cat-burger {
+  top: 200px;
+  left: 260px;
+  width: 109px;
+  height: 98px;
+}
+
+.orange-cat-burger {
+  top: 745px;
+  left: 90px;
+  width: 105px;
+  height: 95px;
+}
+
+.black-cat-burger {
+  top: 500px;
+  left: 1075px;
+  width: 135px;
+  height: 128px;
+}
+
+.position {
+  position:absolute;
+}
+
+.rotate {
+  @include rotation-flowers();
+}
+
+.float {
+  animation: floatLogo 2s ease-in-out infinite
+}

@@ -269,4 +269,202 @@ main {
   width: 278px;
   height: 130px;
   margin-right: 220px;
+}
+
+/* Menu burger */
+.main-navigation {
+  display: flex;
+  position: fixed;
+  width: 1440px;
+}
+.main-navigation ul {
+  display: flex;
+  font-weight: bold;
+  margin-left: 550px;
+}
+
+.navbar-burger {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 400px;
+}
+.navbar-burger span {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar-burger span::before, .navbar-burger span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  transition: transform 0.5s ease-in-out;
+}
+.navbar-burger span::before {
+  transform: translateY(-10px);
+}
+.navbar-burger span::after {
+  transform: translateY(10px);
+}
+.navbar-burger.active span {
+  background-color: transparent !important;
+}
+.navbar-burger.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+}
+.navbar-burger.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
+.site-navigation .site-title {
+  position: fixed;
+}
+
+.burger-open {
+  position: fixed;
+  width: 1440px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in;
+  overflow: hidden;
+  background-color: #FFF5E9;
+}
+.burger-open.open {
+  opacity: 1;
+  visibility: visible;
+  animation: burger-open 1s ease-in-out;
+}
+.burger-open ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 210px;
+  margin-bottom: 130px;
+}
+.burger-open li {
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 140px;
+  list-style: none;
+  margin: 0;
+}
+.burger-open img {
+  margin: auto;
+  display: flex;
+}
+.burger-open a:hover {
+  color: black;
+  text-shadow: -1px -1px 4px rgba(255, 92, 0, 0.3), 4px -1px 4px rgba(255, 92, 0, 0.3), -1px 4px 4px rgba(255, 92, 0, 0.3), 4px 4px 4px rgba(255, 92, 0, 0.3);
+}
+.burger-open p {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 70px;
+}
+
+@keyframes burger-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+.logo-burger {
+  left: 640px;
+  top: 100px;
+  width: 154px;
+  height: 95px;
+}
+
+.sun-flower-burger {
+  top: 115px;
+  left: 1020px;
+  width: 216px;
+  height: 216px;
+}
+
+.orchid-flower-burger {
+  top: 140px;
+  left: -50px;
+  width: 150px;
+  height: 148px;
+}
+
+.petal-flower-burger {
+  top: 505px;
+  left: 205px;
+  width: 70px;
+  height: 70px;
+}
+
+.pink-flower-burger {
+  top: 420px;
+  left: 1390px;
+  width: 80px;
+  height: 75px;
+}
+
+.hibiscus-flower-burger {
+  top: 690px;
+  left: 1135px;
+  width: 626px;
+  height: 626px;
+}
+
+.blue-cat-burger {
+  top: 200px;
+  left: 260px;
+  width: 109px;
+  height: 98px;
+}
+
+.orange-cat-burger {
+  top: 745px;
+  left: 90px;
+  width: 105px;
+  height: 95px;
+}
+
+.black-cat-burger {
+  top: 500px;
+  left: 1075px;
+  width: 135px;
+  height: 128px;
+}
+
+.position {
+  position: absolute;
+}
+
+.rotate {
+  animation: rotate 15s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.float {
+  animation: floatLogo 2s ease-in-out infinite;
 }/*# sourceMappingURL=style.css.map */

@@ -123,3 +123,14 @@ window.addEventListener('scroll', function () {
       littleCloud.style.transform = 'translateX(' + (-translationX) + 'px)';
   }
 });
+
+
+//Ouverture Menu Burger
+
+const burger = document.querySelector('.navbar-burger');
+const menuToggle = document.querySelector('.burger-open');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+});

@@ -27,18 +27,21 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+            <ul class="navbar">
+                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+            </ul>
+            <div class="navbar-burger">
+                <span></span>
+            </div>
+        </nav>
+        <div class="burger-open">
+            <?php get_template_part('/template-parts/images-burger'); ?>
             <ul>
                 <li><a href="#story">Histoire</a></li>
                 <li><a href="#characters">Personnages</a></li>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
                 <li><a href="#place">Lieu</a></li>
                 <li><a href="#studio">Studio Koukaki</a></li>
             </ul>
-
-		</nav><!-- #site-navigation -->
+            <p>STUDIO KOUKAKI</p>
+        </div>
 	</header><!-- #masthead -->
