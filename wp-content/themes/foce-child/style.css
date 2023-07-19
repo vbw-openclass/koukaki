@@ -464,13 +464,9 @@ a {
 /* Responsive */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /* Section bannière */
-  .banner__video {
-    display: none;
-  }
   .banner .logo {
     top: 325px;
     left: 225px;
-    animation: none;
   }
   .main-navigation ul {
     margin-left: 205px;
@@ -596,5 +592,70 @@ a {
     margin-left: 55px;
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  .burger-open ul {
+    text-align: justify;
+    margin-left: 110px;
+    margin-bottom: 0;
+  }
+  .burger-open li {
+    font-size: 30px;
+    line-height: 100px;
+  }
+  .burger-open p {
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 135px;
+  }
+  .burger-open__logo {
+    left: 120px;
+    top: 80px;
+    width: 155px;
+    height: 95px;
+  }
+  /* Section  menu-burger*/
+  .main-character h3 {
+    text-align: center;
+  }
+  .swiper {
+    margin-left: 1.5em !important;
+  }
+  .swiper-slide {
+    width: 200px !important;
+    height: 200px;
+  }
+  /* Section story et place */
+  .story #place {
+    min-height: 0;
+  }
+  .story #place div {
+    display: block;
+    margin-left: 2em !important;
+    margin-top: 310px;
+  }
+  .story #place h3 {
+    text-align: left;
+    background-position: left;
+    margin-left: 30px;
+    padding: 1em 1.3em;
+  }
+  #studio h2 {
+    font-size: 2em;
+  }
+  /* Section nomination-oscar */
+  .nomination-oscar {
+    margin-left: 0;
+  }
+  .nomination-oscar__container {
+    flex-direction: column;
+  }
+  .nomination-oscar__titre {
+    font-size: 15px;
+    padding: 1.8em 4em;
+    line-height: 25px;
+    margin-top: 40px;
+  }
+  .nomination-oscar img {
+    margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
