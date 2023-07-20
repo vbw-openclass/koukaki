@@ -613,12 +613,20 @@ a {
     width: 155px;
     height: 95px;
   }
+  .burger-open__blue-cat {
+    top: 155px;
+    left: 265px;
+  }
+  .burger-open__petal-flower {
+    top: 530px;
+    left: 15px;
+  }
   /* Section  menu-burger*/
   .main-character h3 {
     text-align: center;
   }
   .swiper {
-    margin-left: 1.5em !important;
+    margin-left: 0 !important;
   }
   .swiper-slide {
     width: 200px !important;

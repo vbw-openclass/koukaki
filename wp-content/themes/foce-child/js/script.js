@@ -57,6 +57,35 @@ sections.forEach(function(section) {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const navbarBurger = document.querySelector('.navbar-burger ');
+  const burgerOpen = document.querySelector('.burger-open');
+
+  navbarBurger.addEventListener('click', function () {
+
+      const burgerLinks = burgerOpen.querySelectorAll('ul li a');
+
+
+      burgerLinks.forEach((link) => {
+          link.classList.add('animation-title');
+      });
+
+
+      setTimeout(() => {
+        burgerLinks.forEach((link, index) => {
+          // Le premier lien a un délai de 400ms, les suivants ont un délai de 600ms * index
+            const delay = index === 0 ? 400 : index * 600;
+
+
+            setTimeout(() => {
+                link.classList.add('visibility');
+            }, delay);
+          });
+      }, 150); // Attend 150ms avant de commencer l'animation
+  });
+});
+
+
 
 // parallax vidéo avec la bibliothèque simpleParallax
 // L'événement DOMContentLoaded est utilisé pour s'assurer que le code est exécuté après que le DOM a été chargé
@@ -127,10 +156,10 @@ window.addEventListener('scroll', function () {
 
 //Ouverture Menu Burger
 
-const burger = document.querySelector('.navbar-burger');
-const menuToggle = document.querySelector('.burger-open');
+const navbarBurger = document.querySelector('.navbar-burger');
+const burgerOpen = document.querySelector('.burger-open');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    menuToggle.classList.toggle('open');
+navbarBurger.addEventListener('click', () => {
+  navbarBurger.classList.toggle('active');
+  burgerOpen.classList.toggle('open');
 });

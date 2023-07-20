@@ -190,6 +190,16 @@
             width: 155px;
             height: 95px;
         }
+
+        &__blue-cat {
+            top: 155px;
+            left: 265px;
+        }
+
+        &__petal-flower {
+            top: 530px;
+            left: 15px;
+        }
     }
 
 
@@ -199,7 +209,7 @@
     }
 
     .swiper {
-        margin-left: 1.5em !important;
+        margin-left: 0 !important;
         
         &-slide {
             width: 200px !important;
