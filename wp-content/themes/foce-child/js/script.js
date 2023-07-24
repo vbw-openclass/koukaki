@@ -155,8 +155,17 @@ window.addEventListener('scroll', function () {
 
 const navbarBurger = document.querySelector('.navbar-burger');
 const burgerOpen = document.querySelector('.burger-open');
+const menuLinks = burgerOpen.querySelectorAll('a');
 
 navbarBurger.addEventListener('click', () => {
     navbarBurger.classList.toggle('active');
     burgerOpen.classList.toggle('open');
+});
+
+// Ajouter un gestionnaire d'événement de clic à chaque lien du menu
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        burgerOpen.classList.remove('open');
+        navbarBurger.classList.remove('active');
+    });
 });
