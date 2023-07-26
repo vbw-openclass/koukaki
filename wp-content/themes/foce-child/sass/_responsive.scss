@@ -259,3 +259,49 @@
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+
+    .navbar-burger {
+        margin-left: 15px;
+    }
+
+    .burger-open  {
+
+        ul {
+            margin-left: 60px;
+        }
+
+        &__orchid-flower {
+            top: 100px;
+        }
+
+        &__petal-flower {
+            top: 590px;
+        }
+    }
+
+    /* Section story et place */
+    .story #place {
+
+        h3 {
+            text-align: left;
+            background-position: left;
+            margin-left: 40px;
+            padding: 1em 1em;
+        }
+    }
+    
+    #studio h2 {
+        font-size: 1.95em;
+    }
+
+    .nomination-oscar {
+
+        &__titre {
+            padding: 1.8em 2em;
+        }
+
+    }
+
+}
